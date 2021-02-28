@@ -3,10 +3,10 @@
   PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
  
-<mapper namespace="com.ds.mapper.cornviewMapper">
+<mapper namespace="mapper.cornviewMapper">
 
 	<select id="selectHall" resultType="hallVO">
-        select hall_id, hall_name from hallTb;
+        select * from hallTb;
     </select>
 
 </mapper>
