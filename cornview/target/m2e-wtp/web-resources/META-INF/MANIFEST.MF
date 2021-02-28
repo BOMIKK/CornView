@@ -1,5 +1,10 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
 Built-By: BOMI
 Build-Jdk: 13.0.2
+=======
+Built-By: ￬ﾠﾕ￬ﾝﾸ￬ﾠﾕ
+Build-Jdk: 1.8.0_201
+>>>>>>> branch 'master' of https://github.com/BOMIKK/CornView.git
 Created-By: Maven Integration for Eclipse
 
