@@ -154,6 +154,6 @@ MANIFEST
 # before PyInstaller builds the exe, so as to inject date/other infos into it. 
 *.manifest 
 *.spec
-
+*.MF
 
 # End of https://www.gitignore.io/api/git,java,maven,windows,eclipse
