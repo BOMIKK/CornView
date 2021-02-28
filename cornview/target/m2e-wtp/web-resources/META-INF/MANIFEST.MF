@@ -1,10 +1,5 @@
 Manifest-Version: 1.0
-<<<<<<< HEAD
-Built-By: user
-Build-Jdk: 15.0.1
-=======
 Built-By: BOMI
 Build-Jdk: 13.0.2
->>>>>>> 68d5d075ec395b63612c75796e570ae4cbae5eaa
 Created-By: Maven Integration for Eclipse
 
