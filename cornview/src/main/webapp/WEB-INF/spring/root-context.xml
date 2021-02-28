@@ -29,5 +29,13 @@
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"></property>
     </bean>
+    
+    <!-- mybatis      -->
+    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate"
+        destroy-method="clearCache">
+        <constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory"></constructor-arg>
+    </bean>
 
+    <context:component-scan base-package="com.ds.dao"></context:component-scan>
+    <context:component-scan base-package="com.ds.service"></context:component-scan>
 </beans>
