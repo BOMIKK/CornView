@@ -19,7 +19,7 @@ public class HallServiceImpl implements HallService{
 	@Override
 	public List<HallVO> selectHall() throws Exception {
 		
-		System.out.println("서비스 단계");
+		
 		
 		return dao.selectHall();
 	}

@@ -20,7 +20,7 @@ public class HallDAOImpl implements HallDAO{
 	@Override
 	public List<HallVO> selectHall() throws Exception {
 		
-		System.out.println("sql세션 단계");
+		
 		return sqlSession.selectList("mapper.cornviewMapper.selectHall");
 	}
 	

@@ -74,20 +74,8 @@ public class HomeController {
 	public ModelAndView Main(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		String viewName = getViewName(request);
 		
-		HashMap<String,Integer> hallList=new HashMap<String, Integer>();
-		System.out.println("서비스전");
+		List<HallVO> hallList=hallService.selectHall();
 		
-		List<HallVO> lh=hallService.selectHall();
-		
-		System.out.println("서비스후"+ lh);
-		
-		
-		hallList.put("고척돔", 2);
-		hallList.put("잠실", 3);
-		hallList.put("KSPO", 1);
-		
-		
-		System.out.println("hallList: "+ hallList);
 		
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("hallList", hallList);
