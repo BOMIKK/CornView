@@ -5,5 +5,6 @@
     <configuration>
     	<typeAliases>
             <typeAlias type="com.ds.dto.HallVO" alias="hallVO"/>
+            <typeAlias type="com.ds.dto.ImageVO" alias="imageVO"/>
         </typeAliases>
     </configuration>
