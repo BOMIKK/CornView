@@ -37,7 +37,7 @@
 		<div class="back_pic">
 			<a href="javascript:void(0);" onclick="history.back();"> ← 리스트 보기</a>
 		</div>
-		<img width="800px" height="600px" src="<spring:url value='<%=img_num%>'/>" />
+		<img width="1100px" height="800px" src="<spring:url value='<%=img_num%>'/>" />
 		<!-- <img width="350px" src="<spring:url value='/image/2/${img.image_area}/${img.image_name}'/>" alt="hall_image" /> -->
 	</div>
 
@@ -50,9 +50,12 @@
 	<div class="swiper-container">
 		<div class="swiper-wrapper">
 			<c:forEach var="img" items="${imageList}">
-				<h2>${img.image_area}구역 ${img.image_row}열 ${img.image_no}번</h2>
-				<div class="swiper-slide"><img width="350px" height="300px" src="<spring:url value='/image/2/${img.image_area}/${img.image_name}'/>" alt="hall_image" /></div>
-				
+				<div class="swiper-slide">
+					<div class"test">
+					<img width="450px" height="300px" src="<spring:url value='/image/2/${img.image_area}/${img.image_name}'/>" alt="hall_image" />
+					<h3>${img.image_area}구역 ${img.image_row}열 ${img.image_no}번</h3>
+					</div>
+				</div>
 			</c:forEach>
 		</div>
 		<!-- Add Pagination -->
