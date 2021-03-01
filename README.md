@@ -62,9 +62,14 @@
     3. 이미지 map 설정
 
 #### 5. 구현 사진
-![메인 화면](/portfolio/cv/main.png)
-![좌석 선택](/portfolio/cv/ch.png)
-![근처좌석뷰](/portfolio/cv/v_ch.png)
+1) 메인 화면 
+![메인 화면](/portfolio/main.png)
+
+2) 좌석 선택 
+![좌석선택](/portfolio/ch.png)
+
+3) 근처 좌석 뷰 
+![근처좌석뷰](/portfolio/v_ch.png)
 
 
 #### 6. 후기
