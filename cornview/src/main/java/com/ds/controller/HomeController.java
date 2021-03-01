@@ -20,7 +20,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ds.service.HallService;
+import com.ds.service.ImageService;
 import com.ds.dto.HallVO;
+import com.ds.dto.ImageVO;
 
 
 /**
@@ -33,6 +35,9 @@ public class HomeController {
 	
 	@Autowired
 	private HallService hallService;
+	
+	@Autowired
+	private ImageService imageService;
 	HallVO hallVo;
 	
 	/**
@@ -88,17 +93,18 @@ public class HomeController {
     
 	
 	@RequestMapping(value = "/rowNo", method = RequestMethod.GET)
-	public String rowNo(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
+	public ModelAndView rowNo(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
 		
-		String formattedDate = dateFormat.format(date);
+		List<ImageVO> imgList=imageService.selectHallImage();
 		
-		model.addAttribute("serverTime", formattedDate );
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("imgList", imgList);
 		
-		return "rowNo_detail";
+		
+		mav.setViewName("/rowNo_detail");
+		
+		return mav;
 	}
 	
 	

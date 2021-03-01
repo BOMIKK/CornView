@@ -7,6 +7,13 @@ public class ImageVO {
 	String image_row;
 	String image_no;
 	String image_name;
+	String image_part;
+	public String getImage_part() {
+		return image_part;
+	}
+	public void setImage_part(String image_part) {
+		this.image_part = image_part;
+	}
 	public int getImage_id() {
 		return image_id;
 	}
