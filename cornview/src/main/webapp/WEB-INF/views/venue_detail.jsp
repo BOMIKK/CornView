@@ -119,39 +119,21 @@
 				</div>
 			</div>
 			<div class="imageList">
-<<<<<<< HEAD
-				<c:forEach var="img" items="${imgaList}">
-=======
-				<form action="http://localhost:8080/cornview/rowNo" name="rowno" method="get">
-				
->>>>>>> branch 'master' of https://github.com/BOMIKK/CornView.git
-				<div class="card">
-<<<<<<< HEAD
-					<img width="300px" src="<spring:url value='/image/3/area${img.image_row}/${img.image_name}'/>" alt="hall_image" />
-					<div>${img.image_area}구역 ${img.image_row}열 ${img.image_num}번</div>
-=======
-					<input type="hidden" id="no1" name="row_num" value="421구역 A열 23번">
-					<input type="hidden" id="no2" name="img_num" value="./resources/img/gc.png">
-					
-					<div onClick="document.forms['rowno'].submit();" style="cursor: pointer;"><img src="./resources/img/gc.png" alt="고척돔" /></div>
-					<div>421구역 A열 23번</div>
-					
->>>>>>> branch 'master' of https://github.com/BOMIKK/CornView.git
+			<form action="http://localhost:8080/cornview/rowNo" name="rowno" method="get">
+				<c:forEach var="img" items="${imageList}">
+					<div class="card">
+						<input type="hidden" id="no1" name="row_num" value="${img.image_area}구역 ${img.image_row}열 ${img.image_no}번">
+						<input type="hidden" id="no2" name="img_num" value="/image/2/${img.image_area}/${img.image_name}">
+						<div onClick="document.forms['rowno'].submit();" style="cursor: pointer;">
+						<img width="350px" src="<spring:url value='/image/2/${img.image_area}/${img.image_name}'/>" alt="hall_image" />
+						<div>${img.image_area}구역 ${img.image_row}열 ${img.image_no}번</div>
+					</div>
 				</div>
-<<<<<<< HEAD
 				</c:forEach>
-<%-- 				<div class="card">
-				 	<img width="300px" src="<spring:url value='/image/3/area1/no260.jpg'/>" alt="고척돔" /> 
-					<div>421구역 A열 23번</div>
-				</div> --%>
-=======
-				</form>
-		
->>>>>>> branch 'master' of https://github.com/BOMIKK/CornView.git
+			</form>
 			</div>
 		</div>
 	</div>
-
 </body>
 
 
