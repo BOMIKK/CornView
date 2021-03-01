@@ -30,9 +30,15 @@
 	<div class="container_m">
 		<div class="row">
 			<div class="col-lg-4">
-				<img src="./resources/img/gc.png" alt="고척돔" /> 
-				<img src="./resources/img/js.png" alt="잠실" /> 
+			<a href="http://localhost:8080/cornview/hall/gc">
+				<img src="./resources/img/gc.png" alt="고척돔" />
+			</a>
+			<a href="http://localhost:8080/cornview/hall/jamsil">
+				<img src="./resources/img/js.png" alt="잠실" />
+			</a>
+			<a href="http://localhost:8080/cornview/hall/kspo"> 
 				<img src="./resources/img/kspo.png" alt="kspo" />
+			</a>
 			</div>
 		</div>
 	</div>
