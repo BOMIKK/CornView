@@ -119,44 +119,53 @@
 					</div>
 				</div>
 			</div>
-			<div class="imageList">
-			<form action="http://localhost:8080/cornview/rowNo" name="rowno" method="get">
+	<div class="imageList">
 				<c:forEach var="img" items="${imageList}">
-					<div class="card">
+				<div class="card">
+				<form action="http://localhost:8080/cornview/rowNo" name="${img.image_name}" method="get">
+					<div onClick="move('${img.image_name}')" style="cursor: pointer;">
+						<input type="hidden" id="no3" name="part" value="${img.image_part}">
+						<input type="hidden" id="no4" name="hall_id" value="${img.hall_id}">
 						<input type="hidden" id="no1" name="row_num" value="${img.image_area}구역 ${img.image_row}열 ${img.image_no}번">
 						<input type="hidden" id="no2" name="img_num" value="/image/2/${img.image_area}/${img.image_name}">
-						<div onClick="document.forms['rowno'].submit();" style="cursor: pointer;">
 						<img width="350px" height="250px" src="<spring:url value='/image/2/${img.image_area}/${img.image_name}'/>" alt="hall_image" />
 						<c:choose>
 						<c:when test = "${not empty img.image_row}">
 							<c:choose>
 							<c:when test = "${not empty img.image_no}">
-								<div>${img.image_area} ${img.image_row}열 ${img.image_no}번</div>
+								<div id="seatInfo">${img.image_area} ${img.image_row}열 ${img.image_no}번</div>
 	         				</c:when>
 	         				<c:otherwise>
-	         					<div>${img.image_area} ${img.image_row}열</div>
+	         					<div id="seatInfo">${img.image_area} ${img.image_row}열</div>
 	         				</c:otherwise>
 	         				</c:choose>
          				</c:when>
 				         <c:otherwise>
 				         	<c:choose>
 				         	<c:when test = "${not empty  img.image_no}">
-								<div>${img.image_area} ${img.image_no}번</div>
+								<div id="seatInfo">${img.image_area} ${img.image_no}번</div>
 	         				</c:when>
 							<c:otherwise>
-								<div>${img.image_area}</div>
+								<div id="seatInfo">${img.image_area}</div>
 							</c:otherwise>
 							</c:choose>
 				         </c:otherwise>
 				         </c:choose>
 				        </div>
+				</form>
 				</div>
 				</c:forEach>
-			</form>
 			</div>
 		</div>
 	</div>
 </body>
-
+<script>
+function move(name){
+	var no1 = document.getElementById("no1");
+	var seatInfo =  document.getElementById("seatInfo");
+	no1.value = seatInfo
+	document.forms[name].submit();
+}
+</script>
 
 </html>

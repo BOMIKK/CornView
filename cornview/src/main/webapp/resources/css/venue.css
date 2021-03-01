@@ -32,10 +32,12 @@ div.left {
 	width: 30%;
 	float: left;
 }
-
+div.imageList{
+	display: inline-block;
+}
 div.card {
 	display: inline-block;
-	margin: 10px;
+	 margin: 10px; 
 }
 
 div.right {
