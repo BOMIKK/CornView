@@ -28,6 +28,7 @@
 </head>
 
 <body>
+	
 	<div class="row_num">
 	<%
 		String row_num = request.getParameter("row_num");
@@ -37,21 +38,23 @@
 
 	%>
 		<div class="back_pic">
+			<img src="./resources/img/title.png" alt="title" />
+			<br><br>
 			<a href="javascript:void(0);" onclick="history.back();"> ← 리스트 보기</a>
 		</div>
 		
 		<%if(row_num != ""){
 			if(no_num != ""){
 		%>
-		<div id="seatInfo"><%=area_num%> <%=row_num%>열 <%=no_num%>번</div>
+		<div id="seatInfo">&nbsp;&nbsp;&nbsp;&nbsp;<b><%=area_num%> <%=row_num%>열 <%=no_num%>번</b></div>
 		<%}else{%>
-		<div id="seatInfo"><%=area_num%> <%=row_num%>열</div>
+		<div id="seatInfo">&nbsp;&nbsp;&nbsp;&nbsp;<b><%=area_num%> <%=row_num%>열</b></div>
 		<%}}
 		else{
 			if(no_num != ""){%>
-				<div id="seatInfo"><%=area_num%> <%=no_num%>번</div>
+				<div id="seatInfo">&nbsp;&nbsp;&nbsp;&nbsp;<b><%=area_num%> <%=no_num%>번</b></div>
 			<%} else{ %>
-				<div id="seatInfo"><%=area_num%></div>
+				<div id="seatInfo">&nbsp;&nbsp;&nbsp;&nbsp;<b><%=area_num%></b></div>
 		<%}} %>
 		
 		
@@ -78,7 +81,8 @@
 				</c:choose>
 	         </c:otherwise>
 		</c:choose> --%>
-		<img width="1100px" height="800px" src="<spring:url value='<%=img_num%>'/>" />
+		
+		<img id="mainImg" width="1100px" height="600px" src="<spring:url value='<%=img_num%>'/>" />
 		<!-- <img width="350px" src="<spring:url value='/image/2/${img.image_area}/${img.image_name}'/>" alt="hall_image" /> -->
 	</div>
 

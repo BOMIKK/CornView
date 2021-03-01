@@ -14,6 +14,9 @@ body {
 	margin: 0;
 	padding: 0;
 }
+img{
+	border-radius: 10%;
+}
 .bodyContainer{
 	margin-top:100px;
 	width:100%;
