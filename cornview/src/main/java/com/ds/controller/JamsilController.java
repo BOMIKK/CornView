@@ -33,5 +33,6 @@ public class JamsilController {
 		mav.setViewName("/jamsil");
 		return mav;
 	}
+	
 
 }

@@ -3,7 +3,6 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"
 	language="java"%>
 
-
 <html>
 
 <head>
@@ -35,6 +34,7 @@
 				<h1 id="title">내 최애의 콘서트 뷰</h1>
 				<h1 id="title2">찾아보기</h1>
 				<img src="./resources/img/corn.png" alt="옥수수" id="corn"/>
+				
 			</div>
 			
 		</div>
