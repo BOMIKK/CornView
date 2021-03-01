@@ -19,10 +19,10 @@
         class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property>
         <property name="url"
-            value="jdbc:mysql://3.129.48.122:3306/cornview_db?useSSL=false&amp;serverTimezone=UTC">
+            value="jdbc:mysql://*********:3306/cornview_db?useSSL=false&amp;serverTimezone=UTC">
         </property>
-        <property name="username" value="cornview"></property>
-        <property name="password" value="125400"></property>
+        <property name="username" value="*****"></property>
+        <property name="password" value="******"></property>
     </bean>        
      
     <!-- mybatis SqlSessionFactoryBean -->
