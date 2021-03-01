@@ -9,7 +9,7 @@
 
 <head>
 <link href="./resources/css/main.css" rel="stylesheet" type="text/css">
-<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
 <title>CornView</title>
 </head>
 
@@ -30,6 +30,7 @@
 	<div class="container_m">
 		<div class="row">
 			<div class="col-lg-4">
+<<<<<<< HEAD
 			<a href="http://localhost:8080/cornview/hall/gc">
 				<img src="./resources/img/gc.png" alt="고척돔" />
 			</a>
@@ -37,6 +38,11 @@
 				<img src="./resources/img/js.png" alt="잠실" />
 			</a>
 			<a href="http://localhost:8080/cornview/hall/kspo"> 
+=======
+				<img src="./resources/img/gc.png" alt="고척돔" /> 
+				
+				<img src="./resources/img/js.png" alt="잠실" /> 
+>>>>>>> 607bb189577ea164f53ceec72ea5a62841ba2575
 				<img src="./resources/img/kspo.png" alt="kspo" />
 			</a>
 			</div>
