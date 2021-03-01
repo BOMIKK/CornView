@@ -37,6 +37,9 @@ public class HomeController {
 	private HallService hallService;
 	
 	@Autowired
+	ImageService service;
+	
+	@Autowired
 	private ImageService imageService;
 	HallVO hallVo;
 	
@@ -59,17 +62,17 @@ public class HomeController {
 	
 	
 	@RequestMapping(value = "/venue", method = RequestMethod.GET)
-	public String venue(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
-		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
-		
-		return "venue_detail";
+	public ModelAndView venue(Locale locale, Model model) throws Exception {
+    	ImageVO imagevo = new ImageVO();
+		imagevo.setHall_id(2);
+		imagevo.setImage_part("part1");
+		List<ImageVO> imageList = service.selectHallImageArea(imagevo);
+		System.out.print(imageList.get(0).getImage_part());
+		System.out.print(imageList.get(0).getImage_name());
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("imageList",imageList);
+		mav.setViewName("/venue_detail");
+		return mav;
 	}
 	
 	
@@ -99,7 +102,11 @@ public class HomeController {
 		//List<ImageVO> imgList=imageService.selectHallImage();
 		
 		ModelAndView mav = new ModelAndView();
+<<<<<<< HEAD
 		//mav.addObject("imgList", imgList);
+=======
+	//	mav.addObject("imgList", imgList);
+>>>>>>> branch 'master' of https://github.com/BOMIKK/CornView.git
 		
 		
 		mav.setViewName("/rowNo_detail");

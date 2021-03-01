@@ -2,7 +2,7 @@
 <%@ page session="false"%>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"
 	language="java"%>
-
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%> 
 <c:set var="contextPath" value="${pageContext.request.contextPath}" />
 
 
@@ -29,19 +29,17 @@
 
 <body>
 	<div class="row_num">
-
-		<div class="back_pic">
-			<a href="javascript:void(0);" onclick="history.back();"> ← 리스트 보기</a>
-		</div>
-	</div>
 	<%
 		String row_num = request.getParameter("row_num");
 		String img_num = request.getParameter("img_num");
-
-		out.println("<p>" + row_num + "</p>");
-
-		out.println("<img src=" + img_num + "/>");
 	%>
+		<div class="back_pic">
+			<a href="javascript:void(0);" onclick="history.back();"> ← 리스트 보기</a>
+		</div>
+		<img src="<spring:url value='<%=img_num%>'/>" alt="고척돔" />
+		<!-- <img width="350px" src="<spring:url value='/image/2/${img.image_area}/${img.image_name}'/>" alt="hall_image" /> -->
+	</div>
+
 
 	<div class="near_row_num">
 		<p>근처 열 좌석뷰</p>
@@ -50,11 +48,10 @@
 
 	<div class="swiper-container">
 		<div class="swiper-wrapper">
-
 			<c:forEach var="img" items="${imgList}" end="6">
 				<h2>img_num</h2>
-				<div class="swiper-slide"><img src="<%=img_num%>" alt="고척돔" /></div>
-				
+				<div class="swiper-slide"><img src="<spring:url value='<%=img_num%>'/>" alt="고척돔" /></div>
+				<img width="350px" src="<spring:url value='/image/2/${img.image_area}/${img.image_name}'/>" alt="hall_image" />
 			</c:forEach>
 		</div>
 		<!-- Add Pagination -->
