@@ -9,7 +9,7 @@
 
 <head>
 <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+
 <link href="./resources/css/venue.css" rel="stylesheet" type="text/css">
 <link href="./resources/js/venue.css" rel="stylesheet" type="text/css">
 
@@ -55,11 +55,6 @@
 			</div>
 		</div>
 	</div>
-
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
-	<!-- (Optional) Latest compiled and minified JavaScript translation files -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/i18n/defaults-*.min.js"></script>
 </body>
 </html>
 
