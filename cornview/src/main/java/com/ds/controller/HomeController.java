@@ -102,8 +102,7 @@ public class HomeController {
 		//List<ImageVO> imgList=imageService.selectHallImage();
 		
 		ModelAndView mav = new ModelAndView();
-	//	mav.addObject("imgList", imgList);
-		
+		//mav.addObject("imgList", imgList);
 		
 		mav.setViewName("/rowNo_detail");
 		
