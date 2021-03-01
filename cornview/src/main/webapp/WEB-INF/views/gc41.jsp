@@ -123,9 +123,12 @@
 				<div class="card">
 				<form action="http://localhost:8080/cornview/rowNo" name="${img.image_name}" method="get">
 					<div onClick="move('${img.image_name}')" style="cursor: pointer;">
+						<input type="hidden" id="no1" name="row_num" value="${img.image_row}">
+						<input type="hidden" id="no5" name="area_num" value="${img.image_area}">
+						<input type="hidden" id="no6" name="no_num" value="${img.image_no}">
 						<input type="hidden" id="no3" name="part" value="${img.image_part}">
 						<input type="hidden" id="no4" name="hall_id" value="${img.hall_id}">
-						<input type="hidden" id="no1" name="row_num" value="${img.image_area}구역 ${img.image_row}열 ${img.image_no}번">
+						
 						<input type="hidden" id="no2" name="img_num" value="/image/2/${img.image_area}/${img.image_name}">
 						<img width="350px" height="250px" src="<spring:url value='/image/2/${img.image_area}/${img.image_name}'/>" alt="hall_image" />
 						<c:choose>
@@ -160,9 +163,7 @@
 </body>
 <script>
 function move(name){
-	var no1 = document.getElementById("no1");
-	var seatInfo =  document.getElementById("seatInfo");
-	no1.value = seatInfo
+
 	document.forms[name].submit();
 }
 </script>

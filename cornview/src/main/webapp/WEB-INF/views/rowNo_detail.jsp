@@ -31,12 +31,53 @@
 	<div class="row_num">
 	<%
 		String row_num = request.getParameter("row_num");
+		String area_num = request.getParameter("area_num");
+		String no_num = request.getParameter("no_num");
 		String img_num = request.getParameter("img_num");
-		System.out.print(img_num);
+
 	%>
 		<div class="back_pic">
 			<a href="javascript:void(0);" onclick="history.back();"> ← 리스트 보기</a>
 		</div>
+		
+		<%if(row_num != ""){
+			if(no_num != ""){
+		%>
+		<div id="seatInfo"><%=area_num%> <%=row_num%>열 <%=no_num%>번</div>
+		<%}else{%>
+		<div id="seatInfo"><%=area_num%> <%=row_num%>열</div>
+		<%}}
+		else{
+			if(no_num != ""){%>
+				<div id="seatInfo"><%=area_num%> <%=no_num%>번</div>
+			<%} else{ %>
+				<div id="seatInfo"><%=area_num%></div>
+		<%}} %>
+		
+		
+
+<%-- 		<choose>
+			<c:when test = "${<%=area_num%>">
+				<c:choose>
+				<c:when test = "${not empty no_num}">
+					<div id="seatInfo"><%=area_num%> <%=row_num%>열 <%=no_num%>번</div>
+       			</c:when>
+       			<c:otherwise>
+       			<div id="seatInfo"><%=area_num%> <%=row_num%>열</div>
+       			</c:otherwise>
+       				</c:choose>
+      				</c:when>
+	         <c:otherwise>
+	         	<c:choose>
+	         	<c:when test = "${not empty  no_num}">
+					<div id="seatInfo"><%=area_num%> <%=no_num%>번</div>
+       				</c:when>
+				<c:otherwise>
+					<div id="seatInfo"><%=area_num%></div>
+				</c:otherwise>
+				</c:choose>
+	         </c:otherwise>
+		</c:choose> --%>
 		<img width="1100px" height="800px" src="<spring:url value='<%=img_num%>'/>" />
 		<!-- <img width="350px" src="<spring:url value='/image/2/${img.image_area}/${img.image_name}'/>" alt="hall_image" /> -->
 	</div>
@@ -53,7 +94,28 @@
 				<div class="swiper-slide">
 					<div class"test">
 					<img width="450px" height="300px" src="<spring:url value='/image/2/${img.image_area}/${img.image_name}'/>" alt="hall_image" />
-					<h3>${img.image_area}구역 ${img.image_row}열 ${img.image_no}번</h3>
+					<c:choose>
+						<c:when test = "${not empty img.image_row}">
+							<c:choose>
+							<c:when test = "${not empty img.image_no}">
+								<div id="seatInfo">${img.image_area} ${img.image_row}열 ${img.image_no}번</div>
+	         				</c:when>
+	         				<c:otherwise>
+	         					<div id="seatInfo">${img.image_area} ${img.image_row}열</div>
+	         				</c:otherwise>
+	         				</c:choose>
+         				</c:when>
+				         <c:otherwise>
+				         	<c:choose>
+				         	<c:when test = "${not empty  img.image_no}">
+								<div id="seatInfo">${img.image_area} ${img.image_no}번</div>
+	         				</c:when>
+							<c:otherwise>
+								<div id="seatInfo">${img.image_area}</div>
+							</c:otherwise>
+							</c:choose>
+				         </c:otherwise>
+				         </c:choose>
 					</div>
 				</div>
 			</c:forEach>
