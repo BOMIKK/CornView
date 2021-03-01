@@ -8,5 +8,16 @@
 	<select id="selectHallImage" parameterType="int" resultType="imageVO">
         select * from imageTb where hall_id = #{hallID};
     </select>
+    <select id="selectHallImageArea" parameterType="imageVO" resultType="imageVO">
+        select * from imageTb where hall_id = #{hall_id}
+        <choose>
+	         <when test="image_part != null">
+	        	AND image_part = #{image_part};
+	         </when>
+	         <otherwise>
+	            AND image_area = #{image_area};
+	         </otherwise>
+         </choose>
+    </select>
 
 </mapper>

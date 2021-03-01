@@ -12,12 +12,19 @@ import com.ds.dto.ImageVO;
 @Service
 public class ImageServiceImpl implements ImageService {
 	
+	
 	@Autowired
 	ImageDAO dao;
 	
 	@Override
 	public List<ImageVO> selectHallImage(int hallID) throws Exception {
 		return dao.selectHallImage(hallID);
+	}
+
+	@Override
+	public List<ImageVO> selectHallImageArea(ImageVO imagevo) throws Exception {
+		
+		return dao.selectHallImageArea(imagevo);
 	}
 	
 
