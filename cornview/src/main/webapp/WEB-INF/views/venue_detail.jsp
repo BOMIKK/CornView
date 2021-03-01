@@ -125,7 +125,7 @@
 						<input type="hidden" id="no1" name="row_num" value="${img.image_area}구역 ${img.image_row}열 ${img.image_no}번">
 						<input type="hidden" id="no2" name="img_num" value="/image/2/${img.image_area}/${img.image_name}">
 						<div onClick="document.forms['rowno'].submit();" style="cursor: pointer;">
-						<img width="350px" src="<spring:url value='/image/2/${img.image_area}/${img.image_name}'/>" alt="hall_image" />
+						<img width="350px" height="250px" src="<spring:url value='/image/2/${img.image_area}/${img.image_name}'/>" alt="hall_image" />
 						<div>${img.image_area}구역 ${img.image_row}열 ${img.image_no}번</div>
 					</div>
 				</div>

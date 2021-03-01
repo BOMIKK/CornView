@@ -22,7 +22,7 @@ public class JamsilController {
 	
 	final int HALL_ID = 1;
 	
-	@RequestMapping(value="/jamsil" ,method = RequestMethod.GET) //잠실 이미지
+	@RequestMapping(value="/jamsil1" ,method = RequestMethod.GET) //잠실 이미지
 	public ModelAndView jamsilGet(HttpServletRequest request, HttpServletResponse response) throws Exception {
     	ImageVO imagevo = new ImageVO();
 		imagevo.setHall_id(HALL_ID);

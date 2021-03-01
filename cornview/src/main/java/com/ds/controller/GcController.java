@@ -26,7 +26,7 @@ public class GcController {
 		List<ImageVO> imageList = service.selectHallImageArea(imagevo);
 		System.out.print(imageList.get(0).getImage_part());
 		ModelAndView mav = new ModelAndView();
-		mav.addObject(imageList);
+		mav.addObject("imageList", imageList);
 		mav.setViewName("/gc1");
 		return mav;
 	}
@@ -37,7 +37,7 @@ public class GcController {
 		imagevo.setImage_part("part2");
 		List<ImageVO> imageList = service.selectHallImageArea(imagevo);
 		ModelAndView mav = new ModelAndView();
-		mav.addObject(imageList);
+		mav.addObject("imageList", imageList);
 		mav.setViewName("/gc2");
 		return mav;
 	}
@@ -48,7 +48,7 @@ public class GcController {
 		imagevo.setImage_part("part3");
 		List<ImageVO> imageList = service.selectHallImageArea(imagevo);
 		ModelAndView mav = new ModelAndView();
-		mav.addObject(imageList);
+		mav.addObject("imageList", imageList);
 		mav.setViewName("/gc31");
 		return mav;
 	}
@@ -59,7 +59,7 @@ public class GcController {
 		imagevo.setImage_part("part4");
 		List<ImageVO> imageList = service.selectHallImageArea(imagevo);
 		ModelAndView mav = new ModelAndView();
-		mav.addObject(imageList);
+		mav.addObject("imageList", imageList);
 		mav.setViewName("/gc32");
 		return mav;
 	}
@@ -70,7 +70,7 @@ public class GcController {
 		imagevo.setImage_part("part5");
 		List<ImageVO> imageList = service.selectHallImageArea(imagevo);
 		ModelAndView mav = new ModelAndView();
-		mav.addObject(imageList);
+		mav.addObject("imageList", imageList);
 		mav.setViewName("/gc41");
 		return mav;
 	}
@@ -81,7 +81,7 @@ public class GcController {
 		imagevo.setImage_part("part6");
 		List<ImageVO> imageList = service.selectHallImageArea(imagevo);
 		ModelAndView mav = new ModelAndView();
-		mav.addObject(imageList);
+		mav.addObject("imageList", imageList);
 		mav.setViewName("/gc42");
 		return mav;
 	}
@@ -92,30 +92,30 @@ public class GcController {
 		imagevo.setImage_part("part7");
 		List<ImageVO> imageList = service.selectHallImageArea(imagevo);
 		ModelAndView mav = new ModelAndView();
-		mav.addObject(imageList);
+		mav.addObject("imageList", imageList);
 		mav.setViewName("/gc5");
 		return mav;
 	}
-	@RequestMapping(value="/gc6" ,method = RequestMethod.GET) //∞Ì√¥ ¿ÃπÃ¡ˆ
+	@RequestMapping(value="/gc7" ,method = RequestMethod.GET) //∞Ì√¥ ¿ÃπÃ¡ˆ
 	public ModelAndView gc6(HttpServletRequest request, HttpServletResponse response) throws Exception {
     	ImageVO imagevo = new ImageVO();
 		imagevo.setHall_id(HALL_ID);
 		imagevo.setImage_part("part8");
 		List<ImageVO> imageList = service.selectHallImageArea(imagevo);
 		ModelAndView mav = new ModelAndView();
-		mav.addObject(imageList);
-		mav.setViewName("/gc6");
+		mav.addObject("imageList", imageList);
+		mav.setViewName("/gc7");
 		return mav;
 	}
-	@RequestMapping(value="/gc7" ,method = RequestMethod.GET) //∞Ì√¥ ¿ÃπÃ¡ˆ
+	@RequestMapping(value="/gc6" ,method = RequestMethod.GET) //∞Ì√¥ ¿ÃπÃ¡ˆ
 	public ModelAndView gc7(HttpServletRequest request, HttpServletResponse response) throws Exception {
     	ImageVO imagevo = new ImageVO();
 		imagevo.setHall_id(HALL_ID);
 		imagevo.setImage_part("part9");
 		List<ImageVO> imageList = service.selectHallImageArea(imagevo);
 		ModelAndView mav = new ModelAndView();
-		mav.addObject(imageList);
-		mav.setViewName("/gc7");
+		mav.addObject("imageList", imageList);
+		mav.setViewName("/gc6");
 		return mav;
 	}
 	

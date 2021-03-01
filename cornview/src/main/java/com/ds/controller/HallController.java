@@ -26,7 +26,7 @@ public class HallController {
 	@Autowired
 	ImageService service;
 	
-	@RequestMapping(value="/hall/jamsil" ,method = RequestMethod.GET) //잠실 이미지
+	@RequestMapping(value="/jamsil" ,method = RequestMethod.GET) //잠실 이미지
 	public ModelAndView jamsilGet(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		List<ImageVO> imageList = service.selectHallImage(1);
 		ModelAndView mav = new ModelAndView();
@@ -34,7 +34,7 @@ public class HallController {
 		mav.setViewName("/jamsil");
 		return mav;
 	}
-    @RequestMapping(value = "/hall/jamsil", method = RequestMethod.POST)
+    @RequestMapping(value = "/jamsil", method = RequestMethod.POST)
     public ModelAndView jamsilPost(HttpServletRequest httpServletRequest) throws Exception {
     	String area = httpServletRequest.getParameter("area");
     	ImageVO imagevo = new ImageVO();
@@ -45,7 +45,7 @@ public class HallController {
         return mav; 
     }
 	
-	@RequestMapping(value="/hall/gc" ,method = RequestMethod.GET) //고척 이미지
+	@RequestMapping(value="/gc" ,method = RequestMethod.GET) //고척 이미지
 	public ModelAndView gcGet(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		List<ImageVO> imageList = service.selectHallImage(2);
 		ModelAndView mav = new ModelAndView();
@@ -56,7 +56,7 @@ public class HallController {
 	}
 	
 	@ResponseBody
-    @RequestMapping(value = "/hall/gc", method = RequestMethod.POST)
+    @RequestMapping(value = "/gc", method = RequestMethod.POST)
     public void gcPost(HttpServletRequest httpServletRequest,Model model) throws Exception {
     	String area = httpServletRequest.getParameter("area");
     	ImageVO imagevo = new ImageVO();
@@ -66,7 +66,7 @@ public class HallController {
         model.addAllAttributes(imageList);
     }
 
-	@RequestMapping(value="/hall/kspo" ,method = RequestMethod.GET) //체조 이미지
+	@RequestMapping(value="/kspo" ,method = RequestMethod.GET) //체조 이미지
 	public ModelAndView kspoGet(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		List<ImageVO> imageList = service.selectHallImage(3);
 		ModelAndView mav = new ModelAndView();
@@ -75,7 +75,7 @@ public class HallController {
 		return mav;
 	}
 	
-    @RequestMapping(value = "/hall/kspo", method = RequestMethod.POST)
+    @RequestMapping(value = "/kspo", method = RequestMethod.POST)
     public ModelAndView kspoPost(HttpServletRequest httpServletRequest) throws Exception {
     	String area = httpServletRequest.getParameter("area");
     	ImageVO imagevo = new ImageVO();

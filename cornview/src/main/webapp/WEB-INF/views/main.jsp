@@ -45,9 +45,9 @@
 		<div class="row">
 			<div class="col-lg-4">
 
-			<a href="http://localhost:8080/cornview/hall/gc"> <img src="./resources/img/gc.png" alt="고척돔" /></a>
-			<a href="http://localhost:8080/cornview/hall/jamsil"> <img src="./resources/img/js.png" alt="잠실" /></a>
-			<a href="http://localhost:8080/cornview/hall/kspo"><img src="./resources/img/kspo.png" alt="kspo" /></a>
+			<a href="http://localhost:8080/cornview/gc"> <img src="./resources/img/gc.png" alt="고척돔" /></a>
+			<a href="http://localhost:8080/cornview/jamsil"> <img src="./resources/img/js.png" alt="잠실" /></a>
+			<a href="http://localhost:8080/cornview/kspo"><img src="./resources/img/kspo.png" alt="kspo" /></a>
 
 			</div>
 		</div>

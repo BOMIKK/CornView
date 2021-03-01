@@ -1,40 +1,63 @@
 @font-face {
-    font-family: 'GmarketSansMedium';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'GmarketSansMedium';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
+
 body {
-      font-family: 'GmarketSansMedium';
-      font-size: 20px;
-      color: #000;
-      margin: 0;
-      padding: 0;
-      margin-top:40px;
-      margin-left:40px;
+	font-family: 'GmarketSansMedium';
+	font-size: 20px;
+	color: #000;
+	margin: 0;
+	padding: 0;
+	margin-top: 40px;
+	margin-left: 40px;
 }
-div.body{
-	margin:10px
-	width:100%;
+
+.card img {
+	margin-bottom: 10px
 }
-div.left{
-	width:30%;
-	float :left;
-	
+
+div.body {
+	margin: 10px;
+	width: 100%;
+	vertical-align: middle;
+	width: 100%;
 }
-div.card{
-	display:inline-block;
-	margin-left:20px;
-	margin-right:20px;
+
+div.left {
+	width: 30%;
+	float: left;
 }
-div.right{
-	width:70%;
-    float:right;
+
+div.card {
+	display: inline-block;
+	margin: 10px;
 }
-div.areaInfo{
+
+div.right {
+	width: 70%;
+	float: right;
+}
+
+ div.topInfo {
 	width: 70%;
 	display:inline-block;
 }
-div.dropdown{
-	float: right;
+
+div.areaInfo {
+	text-align:left;
+}
+
+div.dropdown {
+	text-align:right; 
+}
+
+div.nullText {
+	width: 70%;
+	text-align: center;
+	margin-top: 25%;
 }
