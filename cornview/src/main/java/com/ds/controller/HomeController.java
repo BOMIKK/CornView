@@ -102,12 +102,7 @@ public class HomeController {
 		//List<ImageVO> imgList=imageService.selectHallImage();
 		
 		ModelAndView mav = new ModelAndView();
-<<<<<<< HEAD
 		//mav.addObject("imgList", imgList);
-=======
-	//	mav.addObject("imgList", imgList);
->>>>>>> branch 'master' of https://github.com/BOMIKK/CornView.git
-		
 		
 		mav.setViewName("/rowNo_detail");
 		
