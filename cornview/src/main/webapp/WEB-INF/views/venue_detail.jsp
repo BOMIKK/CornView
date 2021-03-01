@@ -15,6 +15,7 @@
 
 
 <title>CornView</title>
+
 </head>
 
 <body>
@@ -40,22 +41,22 @@
 				</div>
 			</div>
 			<div class="imageList">
+				<form action="http://localhost:8080/cornview/rowNo" name="rowno" method="get">
+				
 				<div class="card">
-					<img src="./resources/img/gc.png" alt="고척돔" />
+					<input type="hidden" id="no1" name="row_num" value="421구역 A열 23번">
+					<input type="hidden" id="no2" name="img_num" value="./resources/img/gc.png">
+					
+					<div onClick="document.forms['rowno'].submit();" style="cursor: pointer;"><img src="./resources/img/gc.png" alt="고척돔" /></div>
 					<div>421구역 A열 23번</div>
-					<img src="./resources/img/gc.png" alt="고척돔" />
-					<div>421구역 A열 23번</div>
+					
 				</div>
-				<div class="card">
-					<img src="./resources/img/gc.png" alt="고척돔" />
-					<div>421구역 A열 23번</div>
-					<img src="./resources/img/gc.png" alt="고척돔" />
-					<div>421구역 A열 23번</div>
-				</div>
+				</form>
+		
 			</div>
 		</div>
 	</div>
 </body>
+
+
 </html>
-
-

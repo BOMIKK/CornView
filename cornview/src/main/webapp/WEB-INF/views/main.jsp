@@ -2,16 +2,30 @@
 <%@ page session="false"%>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"
 	language="java"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<c:set var="contextPath" value="${pageContext.request.contextPath}" />
+
 
 <html>
 
 <head>
 <link href="./resources/css/main.css" rel="stylesheet" type="text/css">
 
+
 <title>CornView</title>
 </head>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+      cssMode: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination'
+      },
+      mousewheel: true,
+      keyboard: true,
+    });
+  </script>
 
 <body>
 
@@ -37,7 +51,7 @@
 
 			</div>
 		</div>
-	</div>
+	</div>	
 
 </body>
 
