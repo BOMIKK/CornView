@@ -16,10 +16,8 @@ public class ImageServiceImpl implements ImageService {
 	ImageDAO dao;
 	
 	@Override
-	public List<ImageVO> selectHallImage() throws Exception {
-		
-
-		return dao.selectHallImage();
+	public List<ImageVO> selectHallImage(int hallID) throws Exception {
+		return dao.selectHallImage(hallID);
 	}
 	
 

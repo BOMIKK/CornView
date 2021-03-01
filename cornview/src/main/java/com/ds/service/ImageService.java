@@ -6,7 +6,7 @@ import com.ds.dto.ImageVO;
 
 public interface ImageService {
 	
-	public List<ImageVO> selectHallImage() throws Exception;
+	public List<ImageVO> selectHallImage(int hallID) throws Exception;
 	
 
 }

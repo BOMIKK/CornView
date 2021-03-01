@@ -5,8 +5,8 @@
  
 <mapper namespace="mapper.imageMapper">
 
-	<select id="selectHallImage" resultType="imageVO">
-        select * from imageTb;
+	<select id="selectHallImage" parameterType="int" resultType="imageVO">
+        select * from imageTb where hall_id = #{hallID};
     </select>
 
 </mapper>

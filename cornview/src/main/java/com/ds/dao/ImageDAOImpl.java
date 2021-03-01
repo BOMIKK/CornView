@@ -16,9 +16,9 @@ public class ImageDAOImpl implements ImageDAO {
 	SqlSession sqlSession;
 	
 	@Override
-	public List<ImageVO> selectHallImage() throws Exception {
+	public List<ImageVO> selectHallImage(int hallID) throws Exception {
 		
-		return sqlSession.selectList("mapper.imageMapper.selectHallImage");
+		return sqlSession.selectList("mapper.imageMapper.selectHallImage",hallID);
 	}
 	
 
