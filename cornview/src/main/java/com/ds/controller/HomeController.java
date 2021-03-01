@@ -96,16 +96,14 @@ public class HomeController {
     
 	
 	@RequestMapping(value = "/rowNo", method = RequestMethod.GET)
-	public ModelAndView rowNo(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		
-		
-		//List<ImageVO> imgList=imageService.selectHallImage();
-		
+	public ModelAndView rowNo(String part,String hall_id) throws Exception {
+    	ImageVO imagevo = new ImageVO();
+		imagevo.setHall_id(Integer.parseInt(hall_id));
+		imagevo.setImage_part(part);
+		List<ImageVO> imageList = service.selectHallImageArea(imagevo);
 		ModelAndView mav = new ModelAndView();
-		//mav.addObject("imgList", imgList);
-		
+		mav.addObject("imageList",imageList);
 		mav.setViewName("/rowNo_detail");
-		
 		return mav;
 	}
 	

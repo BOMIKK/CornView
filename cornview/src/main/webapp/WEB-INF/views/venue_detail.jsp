@@ -119,18 +119,21 @@
 				</div>
 			</div>
 			<div class="imageList">
-			<form action="http://localhost:8080/cornview/rowNo" name="rowno" method="get">
 				<c:forEach var="img" items="${imageList}">
-					<div class="card">
-						<input type="hidden" id="no1" name="row_num" value="${img.image_area}구역 ${img.image_row}열 ${img.image_no}번">
-						<input type="hidden" id="no2" name="img_num" value="/image/2/${img.image_area}/${img.image_name}">
-						<div onClick="document.forms['rowno'].submit();" style="cursor: pointer;">
-						<img width="350px" src="<spring:url value='/image/2/${img.image_area}/${img.image_name}'/>" alt="hall_image" />
-						<div>${img.image_area}구역 ${img.image_row}열 ${img.image_no}번</div>
-					</div>
-				</div>
+					<form action="http://localhost:8080/cornview/rowNo" name="rowno${img.image_name}" method="get">
+						<div onClick="document.forms['rowno${img.image_name}'].submit();" style="cursor: pointer;">
+							<div class="card">
+									<input type="hidden" id="no3" name="part" value="${img.image_part}">
+									<input type="hidden" id="no4" name="hall_id" value="${img.hall_id}">
+									<input type="hidden" id="no1" name="row_num" value="${img.image_area}구역 ${img.image_row}열 ${img.image_no}번">
+									<input type="hidden" id="no2" name="img_num" value="/image/2/${img.image_area}/${img.image_name}">
+									<img width="350px" src="<spring:url value='/image/2/${img.image_area}/${img.image_name}'/>" alt="hall_image" />
+									<div>${img.image_area}구역 ${img.image_row}열 ${img.image_no}번</div>
+							</div>
+						</div>
+					</form>
 				</c:forEach>
-			</form>
+			
 			</div>
 		</div>
 	</div>

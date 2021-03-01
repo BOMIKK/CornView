@@ -32,11 +32,12 @@
 	<%
 		String row_num = request.getParameter("row_num");
 		String img_num = request.getParameter("img_num");
+		System.out.print(img_num);
 	%>
 		<div class="back_pic">
 			<a href="javascript:void(0);" onclick="history.back();"> ← 리스트 보기</a>
 		</div>
-		<img src="<spring:url value='<%=img_num%>'/>" alt="고척돔" />
+		<img width="800px" height="600px" src="<spring:url value='<%=img_num%>'/>" />
 		<!-- <img width="350px" src="<spring:url value='/image/2/${img.image_area}/${img.image_name}'/>" alt="hall_image" /> -->
 	</div>
 
@@ -48,10 +49,10 @@
 
 	<div class="swiper-container">
 		<div class="swiper-wrapper">
-			<c:forEach var="img" items="${imgList}" end="6">
-				<h2>img_num</h2>
-				<div class="swiper-slide"><img src="<spring:url value='<%=img_num%>'/>" alt="고척돔" /></div>
-				<img width="350px" src="<spring:url value='/image/2/${img.image_area}/${img.image_name}'/>" alt="hall_image" />
+			<c:forEach var="img" items="${imageList}">
+				<h2>${img.image_area}구역 ${img.image_row}열 ${img.image_no}번</h2>
+				<div class="swiper-slide"><img width="350px" height="300px" src="<spring:url value='/image/2/${img.image_area}/${img.image_name}'/>" alt="hall_image" /></div>
+				
 			</c:forEach>
 		</div>
 		<!-- Add Pagination -->
@@ -63,7 +64,7 @@
 			//initialize swiper when document ready 
 			var swiper = new Swiper('.swiper-container', {
 				slidesPerView : 3,
-				spaceBetween : 0,
+				spaceBetween : 10,
 				freeMode : true,
 				pagination : {
 					
