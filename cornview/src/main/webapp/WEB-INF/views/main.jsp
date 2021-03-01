@@ -9,7 +9,7 @@
 
 <head>
 <link href="./resources/css/main.css" rel="stylesheet" type="text/css">
-<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
 <title>CornView</title>
 </head>
 
@@ -31,6 +31,7 @@
 		<div class="row">
 			<div class="col-lg-4">
 				<img src="./resources/img/gc.png" alt="고척돔" /> 
+				
 				<img src="./resources/img/js.png" alt="잠실" /> 
 				<img src="./resources/img/kspo.png" alt="kspo" />
 			</div>
